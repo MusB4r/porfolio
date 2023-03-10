@@ -4,13 +4,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    ;
 }
 
 body{
     background-color: #39393A;
     color: #E1E5EE;
-    display: flex;
+    display:grid;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .header{
@@ -31,12 +33,13 @@ body{
     color: #E1E5EE;
     text-decoration: none;
     font-weight: 600;
-    cursor: default;
+    cursor: pointer;
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
 .logo:hover{
     cursor:pointer;
+    color: #E9D758;
 }
 .navbar a{
     font-size: 18px;
@@ -44,7 +47,19 @@ body{
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
+    line-height: 46px;
     animation: slideTop 1s ease forwards;
+}
+
+.checkbtn{
+    color: #E9D758;
+    font-size: 30px;
+    float: right;
+    line-height: 46px;
+    display: none;
+}
+#check{
+    display: none;
 }
 
 .navbar a:hover, .navbar a.active{
@@ -53,17 +68,20 @@ body{
 
 .home{
     position: relative;
-    width: 100%;
-    height: 100vh;
+    /* width: 100%; */
+    height: calc(100vh - 78px);
+    max-height: 900px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     padding: 70px 10% 0px;
     animation: slideTop 2s ease forwards;
 }
 
 .home-content{
     max-width: 600px;
+    max-height: calc(100vh - 400px);
+    display:inline;
 }
 
 .home-content h3{
@@ -85,15 +103,18 @@ h3.developer{
 }
 
 .home-content p{
-    font-size: 16px;
+    font-size: 23px;
 }
 
-.home-img{
+.home-img img{
     display:inline-flex;
+    max-width: 100%;
     animation: slideimg 2s ease forwards;
     animation: floatimg 4s ease-in-out infinite;
 }
-
+.social-media{
+    display: flex;
+}
 .social-media a{
     display: inline-flex;
     justify-content: center;
@@ -115,6 +136,7 @@ h3.developer{
 }
 
 .bton{
+    margin: 15px;
     display: inline-block;
     padding: 12px 28px;
     background: #E9D758;
@@ -129,6 +151,8 @@ h3.developer{
     animation: slideSocialMedia 1s ease forwards;
     animation-delay: 1s;
 }
+
+
 
 @keyframes slideRight {
     0%{
@@ -186,3 +210,66 @@ h3.developer{
     }
 }
 
+@media screen and (max-width: 959px) {
+    .navbar a{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .home-content h3{
+        font-size: 18px;
+    }
+    
+    .home-content h1{
+        font-size: 32px;
+        font-weight: 700;
+        margin: -3px;
+    }
+    .home-content p{
+        font-size: 14px;
+    }
+
+    .home-img img{
+        display:inline-flex;
+        max-width: 140%;
+        animation: slideimg 2s ease forwards;
+        animation: floatimg 4s ease-in-out infinite;
+    }
+
+    .social-media a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: 2px solid #E9D758;
+        border-radius: 50%;
+        font-size: 15px;
+        color: #E9D758;
+        text-decoration: none;
+        margin: 30px 15px 30px 0;
+    }
+    .bton{
+        margin: 10px;
+        display: inline-block;
+        padding: 12px 20px;
+        background: #E9D758;
+        border-radius: 30px;
+        box-shadow: 0 0 10px #E9D758;
+        font-size: 12px;
+        color: #39393A;
+        letter-spacing: 1px;
+        text-decoration: none;
+        font-weight: 600;
+        opacity: 0;
+        animation: slideSocialMedia 1s ease forwards;
+        animation-delay: 1s;
+    }
+
+.navbar a{
+    display: none;
+}
+}
