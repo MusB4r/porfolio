@@ -3,12 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
     ;
 }
 
 body{
-    background-color: #39393A;
+    background-color: #242321;
     color: #E1E5EE;
     display:grid;
     overflow: scroll;
@@ -26,6 +29,7 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    backdrop-filter: blur(2px);
 }
 
 .logo{
@@ -51,24 +55,19 @@ body{
     animation: slideTop 1s ease forwards;
 }
 
-.checkbtn{
-    color: #E9D758;
-    font-size: 30px;
-    float: right;
-    line-height: 46px;
-    display: none;
-}
-#check{
-    display: none;
-}
-
 .navbar a:hover, .navbar a.active{
     color: #E9D758;
 }
 
+#menu-icon{
+    font-size: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
 .home{
     position: relative;
-    /* width: 100%; */
     height: calc(100vh - 78px);
     max-height: 900px;
     display: flex;
@@ -79,7 +78,7 @@ body{
 }
 
 .home-content{
-    max-width: 40%;
+    max-width: 45%;
     max-height: calc(100vh - 400px);
     display:inline;
 }
@@ -107,8 +106,7 @@ h3.developer{
 }
 
 .home-img img{
-    display:inline-flex;
-    max-width: 100%;
+    width: 35vw;
     animation: slideimg 2s ease forwards;
     animation: floatimg 4s ease-in-out infinite;
 }
@@ -132,7 +130,7 @@ h3.developer{
 
 .social-media a:hover{
     background-color: #E9D758;
-    color: #39393A;
+    color: #242321;
 }
 
 .bton{
@@ -141,9 +139,9 @@ h3.developer{
     padding: 12px 28px;
     background: #E9D758;
     border-radius: 30px;
-    box-shadow: 0 0 10px #E9D758;
+    box-shadow: 0 0 5px #E9D758;
     font-size: 16px;
-    color: #39393A;
+    color: #242321;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
@@ -151,6 +149,50 @@ h3.developer{
     animation: slideSocialMedia 1s ease forwards;
     animation-delay: 1s;
 }
+
+.bton:hover{
+    box-shadow: none;
+}
+.About{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #201f1d;
+}
+
+.about-dev{
+    color: #E9D758;
+    font-size:300px;
+    text-align: center;
+    animation: floatimg 4s ease-in-out infinite;
+}
+
+.about-content{
+    max-width: 50%;
+    font-size: 23px;
+    text-align: left;
+}
+
+.heading{
+    font-size: 4.5vh;
+}
+
+.typing-2{
+    color: #E9D758;
+    font-size: 4.5vh;
+}
+
+.about-content h2 span{
+    color: #E9D758;
+}
+
+
+
+section{
+    min-height: 100vh;;
+    padding: 10rem 9% 2rem;
+}
+
 
 
 
@@ -210,6 +252,8 @@ h3.developer{
     }
 }
 
+
+
 @media screen and (max-width: 959px) {
     .navbar a{
         margin-left: 20px;
@@ -260,7 +304,7 @@ h3.developer{
         border-radius: 30px;
         box-shadow: 0 0 10px #E9D758;
         font-size: 12px;
-        color: #39393A;
+        color: #242321;
         letter-spacing: 1px;
         text-decoration: none;
         font-weight: 600;
