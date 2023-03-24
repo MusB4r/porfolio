@@ -67,14 +67,9 @@ body{
 }
 
 .home{
-    position: relative;
-    height: calc(100vh - 78px);
-    max-height: 900px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items:center;
-    padding: 70px 10% 0px;
+    justify-content: center;
+    align-items: center;
     animation: slideTop 2s ease forwards;
 }
 
@@ -401,10 +396,11 @@ section{
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
 
     #menu-icon{
         display: block;
+        transition: 0.5s ease;
     }
     .navbar{
         position: absolute;
@@ -414,6 +410,8 @@ section{
         padding: 1rem 3%;
         background: #242321;
         display: none;
+        border-bottom: solid 4px #161513;
+        box-shadow: 0 .5rem 1rem #161513;
     }
     .navbar.active{
         display: block;
@@ -421,11 +419,33 @@ section{
 
     .navbar a{
         display: block;
-        font-size: 2rem;
+        font-size: 2.4vh;
         margin: 3rem 0;
     }
     .header{
         padding: 2rem 3%;
+    }
+
+    .home{
+        flex-direction: column;
+    }
+
+    .home-content p{
+        font-size: 2vh;
+        width: 60%;
+    }
+
+    .home-img img{
+        width: 100vw;
+        margin-top: 5rem;
+    }
+
+    .About{
+        flex-direction: column-reverse;
+    }
+
+    .about-dev{
+        font-size: 40vw;
     }
 
     section{
@@ -435,4 +455,9 @@ section{
     .footer{
         padding: 2rem  3%;
     }
+
+    .footericontop{
+        margin-left: 15em;
+    }
+    
 }
