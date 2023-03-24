@@ -33,7 +33,7 @@ body{
 }
 
 .logo{
-    font-size: 2.4vh;
+    font-size: 3vh;
     color: #E1E5EE;
     text-decoration: none;
     font-weight: 600;
@@ -395,6 +395,15 @@ section{
     }
 }
 
+@keyframes Navingbar{
+    0%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 
 @media only screen and (max-width: 900px) {
 
@@ -415,11 +424,12 @@ section{
     }
     .navbar.active{
         display: block;
+        animation: Navingbar ease 0.5s;
     }
 
     .navbar a{
         display: block;
-        font-size: 2.4vh;
+        font-size: 2.7vh;
         margin: 3rem 0;
     }
     .header{
@@ -437,7 +447,7 @@ section{
 
     .home-img img{
         width: 100vw;
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
 
     .About{
@@ -445,7 +455,11 @@ section{
     }
 
     .about-dev{
-        font-size: 40vw;
+        font-size: 30vw;
+    }
+
+    .about-content{
+        font-size: 2vh;
     }
 
     section{
