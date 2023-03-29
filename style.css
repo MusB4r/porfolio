@@ -41,6 +41,10 @@ body{
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
+.coach{
+    color: #E9D758;
+    font-size: 2.5vh;
+}
 .logo:hover{
     cursor:pointer;
     color: #E9D758;
