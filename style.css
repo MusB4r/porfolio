@@ -45,10 +45,13 @@ body{
     color: #E9D758;
     font-size: 2.5vh;
 }
-.logo:hover{
+.logo:hover, .coach{
     cursor:pointer;
     color: #E9D758;
+    
 }
+
+
 .navbar a{
     font-size: 2vh;
     color: #f1faee;
@@ -245,6 +248,7 @@ h3.developer{
 }
 
 .contact .heading{
+    margin-top: 4rem;
     text-align: center;
     margin-bottom: 3rem;
 }
@@ -261,7 +265,7 @@ h3.developer{
 
 }
 
-.contact form .input-box{
+.contact form .input-box #datos{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
