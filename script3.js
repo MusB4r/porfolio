@@ -16,3 +16,18 @@ window.onscroll = () =>{
         };
     });
 };
+
+let hideContent_btn=document.getElementById('hideContent_btn')
+let hideContent= document.getElementById('hideContent')
+
+hideContent_btn.addEventListener('click', toggleContnet);
+
+function toggleContnet(){
+    hideContent.classList.toggle('show');
+    if(hideContent.classList.contains('show')){
+        hideContent_btn.innerHTML = 'Show Less'
+    }
+    else{
+        hideContent_btn.innerHTML = 'Show More'
+    }
+}

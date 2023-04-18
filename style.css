@@ -243,6 +243,61 @@ h3.developer{
     justify-content: center;
 }
 
+.skill-container .bton{
+    animation: none;
+}
+
+hr{
+    margin: 10px 100px;
+}
+
+.skill-container button{
+    border: none;
+    margin-left: 44%;
+}
+.skill-container a span{
+    color: #e2cf3e;
+}
+
+.showbton{
+    margin: 15px;
+    margin-top: 15px;
+    display: inline-block;
+    padding: 12px 28px;
+    background: #E9D758;
+    border-radius: 30px;
+    font-size: 18px;
+    color: #242321;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
+.showbton:hover{
+    transition: .3s ease;
+    background-color: #161513;
+    color: #E9D758;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: flex;
+    transition: 1s;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+    width: 100%;
+    
+}
+
+
+
 .portfolio{
     background-color: #1a1917;
 }
@@ -488,5 +543,10 @@ section{
     .footericontop{
         margin-left: 15em;
     }
+    .skill-container button{
+        border: none;
+        margin-left: 28%;
+    }
+    
     
 }
